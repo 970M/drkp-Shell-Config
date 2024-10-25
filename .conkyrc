@@ -1,0 +1,132 @@
+conky.config ={
+  -- CONKY SETTINGS
+  background = true,
+  update_interval = 1,
+  total_run_times = 0,
+  
+  cpu_avg_samples = 2,
+  net_avg_samples = 2,
+  
+  override_utf8_locale = true,
+  
+  double_buffer = true,
+  no_buffers = true,
+  
+  text_buffer_size = 32768,
+  
+  -- CONKY: WINDOW SPECIFICATIONS
+  
+  
+  
+  own_window = true,
+  own_window_argb_value = 192,
+  own_window_argb_visual = true,
+  own_window_class = 'conky-semi',
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_type = override,  
+  own_window_transparent = true,
+  own_window_type = 'normal',
+  -- own_window_type = 'desktop',
+
+  border_inner_margin = 6,
+  border_width = 5, 
+
+  minimum_height = 800,
+
+  minimum_width = 320,
+  maximum_width = 320,
+
+  alignment = 'top_right',
+  gap_x = 0,
+  gap_y = 0,
+
+  -- GRAPHICS SETTINGS
+  draw_shades = false,
+  draw_outline = false,
+  draw_borders = false,
+  draw_graph_borders = true,
+  -- draw_graph_borders = false,
+
+  -- TEXT SETTINGS
+  use_xft = true,
+  font = 'Source_Code_Pro Regular:size=10',
+  xftalpha = 0.2,
+
+  uppercase = false,
+
+  -- Pad percentages to this many decimals (0 = no padding)
+  pad_percents = 2,
+
+  -- COLOUR SETTINGS
+  default_color = 'D79921',
+  default_shade_color = '282828',
+  -- default_outline_color = '111111',
+  -- default_outline_color = 'D65D0E',
+  color1 = 'CC241D',
+  color2 = '98971A',
+  color4 = '458588',
+  color3 = 'D79921',
+  color5 = 'B16286',
+  color6 = '689D6A',
+  color7 = 'D65D0E',
+  color8 = 'FBF1C7',
+  color9 = '282828'
+
+};
+
+
+conky.text = [[
+${font Source_Code_Pro:style=Bold:size=11}${color3}$nodename ${color1}${hr 2} 
+${voffset -15}
+${font Source_Code_Pro:size=8}${color2}KERNEL :${color4}${font Source_Code_Pro:style=Bold:size=10}$kernel${color8}${font Source_Code_Pro:size=10}${alignr}$machine
+${font Source_Code_Pro:size=8}${color2}UPTIME :${color8}${font :size=10}${alignr}$uptime_short
+${font Source_Code_Pro:size=8}${color2}SYSTEM :${color8}${font :size=10}${alignr}$sysname
+${voffset -10}  
+${font Source_Code_Pro:style=Bold:size=11}${color3}CPU ${color1}${hr 2}
+${voffset -15}  
+${font Source_Code_Pro:size=8}${color2}CPU:${color4}${font Source_Code_Pro:style=Bold:size=10} ${cpu cpu1} %${font Source_Code_Pro:size=8}${color2}${alignr}Freq. :${color8}${font :size=10} $freq_g Ghz
+${voffset -20}  
+${color4}${cpubar 10,320, 458588 458588 -t}
+${voffset -15}  
+${font Source_Code_Pro:style=Bold:size=11}${color3}DISKS ${color1}${hr 2}${color}
+${voffset -15}
+${font :size=10}${font Source_Code_Pro:size=8}${color2}USED :${color8}${font :size=10} ${fs_used /} / ${fs_size /}${color4}${font Source_Code_Pro:style=Bold:size=10}${alignr}  $fs_used_perc% 
+${color4}${voffset -15}
+${fs_bar 10 /}
+${font Source_Code_Pro:size=8}${color2}DISK I/O :${color8}${font :size=10}${alignr}$diskio
+${voffset -14}
+${font Source_Code_Pro:size=8}${color2}READ :${color8}${font :size=10}${goto 70}${color9}${diskiograph_read  15,250 689D6A 689D6A 750}
+${voffset -14}
+${font Source_Code_Pro:size=8}${color2}WRITE :${color8}${font :size=10}${goto 70}${color9}${diskiograph_write 15,250 689D6A 689D6A 750}
+${voffset -10}
+${font Source_Code_Pro:style=Bold:size=11}${color3}MEMORY ${color1}${hr 2}
+${voffset -15}
+${font Source_Code_Pro:size=8}${color2}RAM USED :${font Source_Code_Pro:size=10}${color8} ${mem \} / ${memmax \} ${goto 150}${font Source_Code_Pro:size=8}${color2}${alignr}${color4}${font Source_Code_Pro:style=Bold:size=10}${alignr} $memperc% ${font :size=10}
+${voffset -20}  
+${color4}${membar 10,320, 458588 458588 -t}
+${voffset -15}
+${font Source_Code_Pro:style=Bold:size=11}${color3}NETWORK ${color1}${hr 2}
+${voffset -15}
+${font Source_Code_Pro:size=8}${color2}LAN IP ADDR :${color4}${font Source_Code_Pro:style=Bold:size=10}${alignr} ${addr wlp0s20f3}
+${font :size=10}${font Source_Code_Pro:size=8}${color2}UP :${color8}${font :size=10} ${upspeed wlp0s20f3}${goto 180}${font Source_Code_Pro:size=8}${color2}${alignr}DOWN :${color8}${font :size=10} ${downspeed wlp0s20f3}
+${voffset -15}
+${font Source_Code_Pro:size=8}${color2}UPLOAD : ${goto 70}${color9}${upspeedgraph wlp0s20f3 15,250 689D6A 689D6A -t}
+${voffset -14}
+${font Source_Code_Pro:size=8}${color2}DOWN :${goto 70}${color9}${downspeedgraph wlp0s20f3 15,250 689D6A 689D6A -t}
+${voffset -14}
+${font :size=10}${font Source_Code_Pro:size=8}${color2}TOTAL UP :${color8}${font :size=10} ${totalup wlp0s20f3}${font Source_Code_Pro:size=8}${color2}${alignr}TOTAL DOWN :${color8}${font :size=10} ${totaldown wlp0s20f3}
+${voffset -15}
+${font Source_Code_Pro:style=Bold:size=11}${color3}PROCESSES ${color1}${hr 2}A
+${voffset -15}
+${font Source_Code_Pro:size=9}${color2}APP NAME : ${goto 160}MEMORY : ${goto 280}CPU :
+${voffset -8}
+${font Source_Code_Pro:size=8}${color8}  ${top_mem name 1} ${color6}${font :size=10} ${goto 160}${top mem 1} % ${goto 270}${top cpu 1} %
+${font Source_Code_Pro:size=8}${color8}  ${top_mem name 2} ${color6}${font :size=10} ${goto 160}${top mem 2} % ${goto 270}${top cpu 2} %
+${font Source_Code_Pro:size=8}${color8}  ${top_mem name 3} ${color6}${font :size=10} ${goto 160}${top mem 3} % ${goto 270}${top cpu 3} %
+${font Source_Code_Pro:size=8}${color8}  ${top_mem name 4} ${color6}${font :size=10} ${goto 160}${top mem 4} % ${goto 270}${top cpu 4} %
+${font Source_Code_Pro:size=8}${color8}  ${top_mem name 5} ${color6}${font :size=10} ${goto 160}${top mem 5} % ${goto 270}${top cpu 5} %
+${font Source_Code_Pro:size=8}${color8}  ${top_mem name 6} ${color6}${font :size=10} ${goto 160}${top mem 6} % ${goto 270}${top cpu 6} %
+${font Source_Code_Pro:size=8}${color8}  ${top_mem name 7} ${color6}${font :size=10} ${goto 160}${top mem 7} % ${goto 270}${top cpu 7} %
+${voffset -15}
+${font Source_Code_Pro:size=10}${color4}${alignr}${processes} ${font :size=8}processes
+]];
