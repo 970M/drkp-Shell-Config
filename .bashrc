@@ -101,10 +101,9 @@ fi
 # -------------------------------------------------------------------------------------
 
 
-
 gijom="970M"
 craft="9C124FT"
-
+workspace="Workspace"
 # My aliases
 alias ll='ls -lF'
 alias l='ls -CF1'
@@ -119,7 +118,7 @@ alias cdt="cd $HOME/Téléchargements"
 alias cdd="cd $HOME/Documents"
 alias cdb="cd $HOME/bin"
 alias cdg="cd $HOME/$gijom"
-alias cdw="cd $HOME/$craft"
+alias cdw="cd $HOME/src/$workspace"
 alias cdn="cd $HOME/src/tests-neadvr; venv"
 alias cdp="cd $HOME/src/tests-neadvr/pytest; venv"
 alias cdc="cd $HOME/src/tests-neadvr/cypress; venv"
@@ -137,7 +136,6 @@ alias eds="gnome-text-editor /etc/apt/sources.list"
 alias meteo="curl \"wttr.in/Paris?format=v2&lang=fr\""
 alias getalias="cat ~/.bashrc | grep -v \"#\" | grep -E \"alias|function\""
 alias venv='source $HOME/src/venv-dvr/bin/activate'
-alias venv2='source $HOME/src2/venv-dvr/bin/activate'
 alias cy='npx cypress open'
 alias memo='edi $HOME/$craft/970M_memo.md &'
 alias memoe='gnome-text-editor $HOME/$craft/970M_memo.md &'
@@ -146,6 +144,7 @@ alias soapott='soapsh ott'
 alias setott='$HOME/bin/create_basic_ott_conf.py'
 alias ablkc='ateme-black --check'
 alias ablk='ateme-black'
+alias opws="code $HOME/src/$workspace"
 
 # Alias hosts
 alias sbr1='ssh root@qas-neadvr-streamer-perf-1.lab1.anevia.com'
