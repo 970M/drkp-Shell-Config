@@ -176,6 +176,9 @@ export EDITOR=gnome-text-editor
 export PATH=~/bin:$PATH
 export PATH=~/bin/utils:$PATH
 export PATH=~/src/tests-neadvr/benchmark/scripts/ott-service-manager:$PATH
+export PATH="$PATH:$HOME/src/$workspace/Utils/Profile_Setup_Utilities"
+export PATH="$PATH:$HOME/src/$workspace/Utils/Tools"
+
 
 export PYTHONPATH=$PYTHONPATH:$HOME/src/tests-neadvr/pytest
 export PYTHONPATH=$PYTHONPATH:$HOME/src/tests-neadvr/pytest/third_party/titanlive_test_framework/framework/src/framework
