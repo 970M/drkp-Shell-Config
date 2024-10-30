@@ -86,16 +86,18 @@ ${font Source_Code_Pro:size=8}${color2}SYSTEM :${color8}${font :size=10}${alignr
 ${voffset -10}  
 ${font Source_Code_Pro:style=Bold:size=11}${color3}CPU ${color1}${hr 2}
 ${voffset -15}  
-${font Source_Code_Pro:size=8}${color2}CPU:${color4}${font Source_Code_Pro:style=Bold:size=10} ${cpu cpu1} %${font Source_Code_Pro:size=8}${color2}${alignr}Freq. :${color8}${font :size=10} $freq_g Ghz
-${voffset -14}  
-${color4}${cpugraph 15,315 458588 458588 -t}
+${font Source_Code_Pro:size=8}${color2}FREQ. :${color8}${font :size=10} $freq_g Ghz
+${voffset -20}  
+${color4}${cpugraph 20,320 458588 458588 -t}
+${voffset -20}  
+${color5}${cpubar 10,275, 458588 458588 -t}${color8}${font Source_Code_Pro:style=Bold:size=10}${alignr}${cpu cpu1} % ${font :size=10}
 ${voffset -10}  
 ${font Source_Code_Pro:style=Bold:size=11}${color3}DISKS ${color1}${hr 2}${color}
 ${voffset -15}
-${font :size=10}${font Source_Code_Pro:size=8}${color2}USED :${color8}${font :size=10} ${fs_used /} / ${fs_size /}${color4}${font Source_Code_Pro:style=Bold:size=10}${alignr}  $fs_used_perc% 
+${font :size=10}${font Source_Code_Pro:size=8}${color2}USED :${color8}${font :size=10} ${fs_used /}${color4} / ${fs_size /}${color8}${font Source_Code_Pro:style=Bold:size=10}${alignr}  $fs_used_perc% 
 ${color5}${voffset -15}
-${fs_bar 6 /}
-${font Source_Code_Pro:size=8}${color2}DISK I/O :${color8}${font :size=10}${alignr}$diskio
+${fs_bar 10 /}
+${font Source_Code_Pro:size=8}${color2}DISK I/O :${color8}${font :size=10} $diskio
 ${voffset -14}
 ${font Source_Code_Pro:size=8}${color2}READ :${font :size=10}${goto 120}${alignr}${color6}${diskiograph_read  15,260 689D6A 689D6A 750}
 ${voffset -14}
@@ -103,9 +105,11 @@ ${font Source_Code_Pro:size=8}${color2}WRITE :${font :size=10}${goto 120}${align
 ${voffset -10}
 ${font Source_Code_Pro:style=Bold:size=11}${color3}MEMORY ${color1}${hr 2}
 ${voffset -15}
-${font Source_Code_Pro:size=8}${color2}RAM USED :${font Source_Code_Pro:size=10}${color8} ${mem \} / ${memmax \} ${goto 150}${font Source_Code_Pro:size=8}${color2}${alignr}${color4}${font Source_Code_Pro:style=Bold:size=10}${alignr} $memperc% ${font :size=10}
-${voffset -14}  
-${color4}${memgraph 15,315 458588 458588 -t}
+${font Source_Code_Pro:size=8}${color2}RAM USED :${font Source_Code_Pro:size=10}${color8} ${mem \}${color4} / ${memmax \} 
+${voffset -20}  
+${color4}${memgraph 20,320 458588 458588 -t}
+${voffset -20}  
+${color5}${membar 10,275, 458588 458588 -t}${color8}${font Source_Code_Pro:style=Bold:size=10}${alignr}$memperc %${font :size=10}
 ${voffset -15}
 ${font Source_Code_Pro:style=Bold:size=11}${color3}NETWORK ${color1}${hr 2}
 ${voffset -15}
