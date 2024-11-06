@@ -192,6 +192,13 @@ export HISTTIMEFORMAT='%x %T '
 # -------------------------------------------------------------------------------------
 ### Functions
 
+# Find sans les erreurs
+function fd ()
+{
+  find $1 -name $2 -print 2>/dev/null
+}
+
+
 # Mise à jour du systeme 
 upd()
 {
@@ -333,6 +340,7 @@ function setcfg()
 }
 
 alias getcfg='cat $HOME/src/tests-neadvr/pytest/configs/gda.cfg;echo'
+
 
 # #####################################################################################
 # ## ATEME ENV
