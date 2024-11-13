@@ -102,7 +102,7 @@ fi
 
 
 gijom="970M"
-craft="9C124FT"
+craft="ATEME"
 workspace="Workspace"
 # My aliases
 alias ll='ls -lF'
@@ -123,12 +123,11 @@ alias cdn="cd $HOME/src/tests-neadvr; venv"
 alias cdp="cd $HOME/src/tests-neadvr/pytest; venv"
 alias cdc="cd $HOME/src/tests-neadvr/cypress; venv"
 alias cds="cd $HOME/src"
-alias cdtst="cd $HOME/src/tests-neadvr/pytest/tests; venv"
 alias h="history"
 alias hgrep="history|grep"
 alias vi="nvim --cmd \":set nu\""
 alias edi="gnome-text-editor"
-alias edb="gnome-text-editor ~/.bashrc &"
+alias edb="code $HOME/src/$workspace/.vscode/Workspace.code-workspace -g $HOME/src/$workspace/Shell/.bashrc:104 &"
 alias code="code -n"
 alias na="nautilus"
 alias log="journalctl"
@@ -137,8 +136,7 @@ alias meteo="curl \"wttr.in/Paris?format=v2&lang=fr\""
 alias getalias="cat ~/.bashrc | grep -v \"#\" | grep -E \"alias|function\""
 alias venv='source $HOME/src/venv-dvr/bin/activate'
 alias cy='npx cypress open'
-alias memo='edi $HOME/$craft/970M_memo.md &'
-alias memoe='gnome-text-editor $HOME/$craft/970M_memo.md &'
+alias memo='firefox /home/gdaguet/970M/W012X/Workspace/How-To/README.md &'
 alias note='gnome-text-editor $HOME/$craft/970M_notebook.md &'
 alias soapott='soapsh ott'
 alias setott='$HOME/bin/create_basic_ott_conf.py'
