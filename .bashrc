@@ -144,6 +144,7 @@ alias ablkc='ateme-black --check'
 alias ablk='ateme-black'
 alias opws="code $HOME/src/$workspace"
 
+
 # Alias hosts
 alias sbr1='ssh root@qas-neadvr-streamer-perf-1.lab1.anevia.com'
 alias sbr2='ssh root@qas-neadvr-streamer-perf-2.lab1.anevia.com'
@@ -338,7 +339,7 @@ function setcfg()
 }
 
 alias getcfg='cat $HOME/src/tests-neadvr/pytest/configs/gda.cfg;echo'
-
+alias fetchcfg='cp /home/gdaguet/src/Workspace/VScode/*.cfg $HOME/src/tests-neadvr/pytest/configs/'
 
 # #####################################################################################
 # ## ATEME ENV
