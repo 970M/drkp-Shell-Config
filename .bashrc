@@ -143,6 +143,7 @@ alias setott='$HOME/bin/create_basic_ott_conf.py'
 alias ablkc='ateme-black --check'
 alias ablk='ateme-black'
 alias opws="code $HOME/src/$workspace"
+alias rlc='killall conky; conky -d'
 
 
 # Alias hosts
