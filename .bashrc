@@ -144,6 +144,7 @@ alias ablkc='ateme-black --check'
 alias ablk='ateme-black'
 alias opws="code $HOME/src/$workspace"
 alias rlc='killall conky; conky -d'
+alias addch='venv;/home/gdaguet/src/Workspace/Repos/Tools/create_basic_ott_conf.py'
 
 
 # Alias hosts
@@ -173,11 +174,13 @@ alias newcert='K=~/.ssh/id_ed25519; curl -f -F "pubkey=@$K.pub" https://ssh-ca.a
 
 export EDITOR=gnome-text-editor
 ### PATH 
-export PATH=~/bin:$PATH
-export PATH=~/bin/utils:$PATH
-export PATH=~/src/tests-neadvr/benchmark/scripts/ott-service-manager:$PATH
-export PATH="$PATH:$HOME/src/$workspace/Utils/Profile_Setup_Utilities"
-export PATH="$PATH:$HOME/src/$workspace/Utils/Tools"
+
+export PATH="$PATH:$HOME/src/$workspace"
+export PATH="$PATH:$HOME/src/$workspace/Repos/Profile_Setup_Utilities"
+export PATH="$PATH:$HOME/src/$workspace/Repos/Tools"
+export PATH="$PATH:$HOME/src/$workspace/Repos/soap-common"
+
+
 
 
 export PYTHONPATH=$PYTHONPATH:$HOME/src/tests-neadvr/pytest
