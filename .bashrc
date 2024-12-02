@@ -119,9 +119,9 @@ alias cdd="cd $HOME/Documents"
 alias cdb="cd $HOME/bin"
 alias cdg="cd $HOME/$gijom"
 alias cdw="cd $HOME/src/$workspace"
-alias cdn="cd $HOME/src/tests-neadvr; venv"
-alias cdp="cd $HOME/src/tests-neadvr/pytest; venv"
-alias cdc="cd $HOME/src/tests-neadvr/cypress; venv"
+alias cdn="cd $HOME/src/tests-neadvr"
+alias cdp="cd $HOME/src/tests-neadvr/pytest"
+alias cdc="cd $HOME/src/tests-neadvr/cypress"
 alias cds="cd $HOME/src"
 alias h="history"
 alias hgrep="history|grep"
@@ -134,7 +134,8 @@ alias log="journalctl"
 alias eds="gnome-text-editor /etc/apt/sources.list"
 alias meteo="curl \"wttr.in/Paris?format=v2&lang=fr\""
 alias getalias="cat ~/.bashrc | grep -v \"#\" | grep -E \"alias|function\""
-alias venv='source $HOME/src/venv-dvr/bin/activate'
+alias venv3-9='source $HOME/src/venv-3.9/bin/activate'
+alias venv3-10='source $HOME/src/venv-3.10/bin/activate'
 alias cy='npx cypress open'
 alias memo='firefox /home/gdaguet/970M/W012X/Workspace/How-To/README.md &'
 alias note='gnome-text-editor $HOME/$craft/970M_notebook.md &'
@@ -144,7 +145,8 @@ alias ablkc='ateme-black --check'
 alias ablk='ateme-black'
 alias opws="code $HOME/src/$workspace"
 alias rlc='killall conky; conky -d'
-alias addch='venv;/home/gdaguet/src/Workspace/Repos/Tools/create_basic_ott_conf.py'
+alias rlb='. ~/.bashrc'
+alias addch='venv3-9;/home/gdaguet/src/Workspace/Repos/Tools/create_basic_ott_conf.py'
 
 
 # Alias hosts
@@ -179,12 +181,13 @@ export PATH="$PATH:$HOME/src/$workspace"
 export PATH="$PATH:$HOME/src/$workspace/Repos/Profile_Setup_Utilities"
 export PATH="$PATH:$HOME/src/$workspace/Repos/Tools"
 export PATH="$PATH:$HOME/src/$workspace/Repos/soap-common"
+export PATH="$PATH:$HOME/src/tests-neadvr/benchmark/scripts"
 
 
 
-
-export PYTHONPATH=$PYTHONPATH:$HOME/src/tests-neadvr/pytest
-export PYTHONPATH=$PYTHONPATH:$HOME/src/tests-neadvr/pytest/third_party/titanlive_test_framework/framework/src/framework
+export PYTHONPATH="$PYTHONPATH:$HOME/src/tests-neadvr/pytest"
+export PYTHONPATH="$PYTHONPATH:$HOME/src/tests-neadvr/benchmark/scripts"
+export PYTHONPATH="$PYTHONPATH:$HOME/src/tests-neadvr/pytest/third_party/titanlive_test_framework/framework/src/framework"
 
 # For Terraform
 export PATH=/usr/local/bin:$PATH
