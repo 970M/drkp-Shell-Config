@@ -134,8 +134,8 @@ alias log="journalctl"
 alias eds="gnome-text-editor /etc/apt/sources.list"
 alias meteo="curl \"wttr.in/Paris?format=v2&lang=fr\""
 alias getalias="cat ~/.bashrc | grep -v \"#\" | grep -E \"alias|function\""
-alias venv3-9='source $HOME/src/venv-3.9/bin/activate'
-alias venv3-10='source $HOME/src/venv-3.10/bin/activate'
+alias venv9='source $HOME/src/venv-3.9/bin/activate'
+alias venv='source $HOME/src/venv-3.10/bin/activate'
 alias cy='npx cypress open'
 alias memo='firefox /home/gdaguet/970M/W012X/Workspace/How-To/README.md &'
 alias note='gnome-text-editor $HOME/$craft/970M_notebook.md &'
@@ -146,7 +146,7 @@ alias ablk='ateme-black'
 alias opws="code $HOME/src/$workspace"
 alias rlc='killall conky; conky -d'
 alias rlb='. ~/.bashrc'
-alias addch='venv3-9;/home/gdaguet/src/Workspace/Repos/Tools/create_basic_ott_conf.py'
+alias addch='venv;/home/gdaguet/src/Workspace/Repos/Tools/create_basic_ott_conf.py -s arte'
 
 
 # Alias hosts
